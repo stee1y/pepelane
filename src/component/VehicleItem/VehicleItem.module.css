@@ -1,0 +1,48 @@
+
+.VehicleItem {
+  display: flex;
+  padding: 20px;
+  margin: 12px 0;
+  background-color: #FCFCFC;
+  border-radius: 24px;
+  max-width: 373px;
+  box-sizing: border-box;
+}
+
+.img {
+  width: 88px;
+  height: 88px;
+  margin-right: 20px;
+}
+
+.grup_text {
+  
+}
+.title {
+  margin: 12px 0;
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 14px;
+}
+.description {
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+}
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: #F84AB3;
+}
+
+@media only screen and (min-width: 768px) {
+  .VehicleItem {
+    
+    margin: 30px;
+    
+  }
+}
