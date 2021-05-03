@@ -3,9 +3,28 @@
     background-color: red;
   }
 
+.modal {
+  position: absolute;
+  top: 65px;
+  left: auto;
+  right: 40px;
+  bottom: auto;
+  outline: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px 20px;
@@ -43,8 +62,6 @@
     margin-right: 18px;
   }
 
-
-
   .messages_img {
   }
   .notification {
@@ -57,23 +74,46 @@
   .notification_img {
     
   }
-  .login_grup {
+  .user_grup {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: transparent;
+    border-color: transparent;
   }
-  .login_name {
+  .user_name {
     font-size: 0px;
   }
-  .login_avatar {
+  .user_avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     overflow: hidden;
   }
-  .login_avatar_img {
+  .user_avatar_img {
     width: 100%;
     height: auto;
+  }
+  
+  .login {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #F3F4F7;
+    bottom: -70px;
+    right: 0;
+    border-radius: 5% 0 5% 5%;
+  }
+
+  .login::before {
+    position: absolute;
+    content: '';
+    border: 10px solid transparent; 
+    border-right: 10px solid #F3F4F7; 
+    border-bottom: 10px solid #F3F4F7;
+    top: -10px;
+    right: 0;
+    
   }
 }
 
@@ -81,6 +121,7 @@
 @media only screen and (min-width: 600px) {
   .header {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
   }
@@ -133,28 +174,59 @@
   .notification_img {
     
   }
-  .login_grup {
+  .user_grup {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: transparent;
+    border-color: transparent;
   }
-  .login_name {
+
+  .user_name {
     font-size: 0px;
   }
-  .login_avatar {
+
+  .user_avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     overflow: hidden;
   }
-  .login_avatar_img {
+  
+  .user_avatar_img {
     width: 100%;
     height: auto;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F3F4F7;
+    bottom: -110px;
+    right: 0;
+  }
+
+  .login::before {
+    position: absolute;
+    content: '';
+    border: 10px solid transparent; 
+    border-right: 10px solid #F3F4F7; 
+    border-bottom: 10px solid #F3F4F7;
+    top: -10px;
+    right: 0;
+    
   }
 }
 
 
 @media only screen and (min-width: 768px) {
+
+  .modal {
+    top: 105px;
+    right: 50px;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -205,15 +277,15 @@
   .notification_img {
     
   }
-  .login_grup {
+  .user_grup {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .login_name {
+  .user_name {
     font-size: 0px;
   }
-  .login_avatar {
+  .user_avatar {
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -273,12 +345,12 @@
   .notification_img {
     
   }
-  .login_grup {
+  .user_grup {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .login_name {
+  .user_name {
     font-size: 0px;
   }
   
@@ -313,7 +385,7 @@
     margin-right: 18px;
   }
 
-  .login_name {
+  .user_name {
     font-size: 16px;
     margin-right: 16px;
   }
@@ -375,15 +447,15 @@
 .notification_img {
   
 }
-.login_grup {
+.user_grup {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.login_name {
+.user_name {
   margin-right: 16px;
 }
-.login_avatar {
+.user_avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
